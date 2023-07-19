@@ -1,0 +1,18 @@
+#!/bin/bash
+
+SEED=${RANDOM}
+FLUXFILE= # needs to be filled
+TARGET=1000180400
+TARGETFRACTION=1.0
+RUNNUMBER=1
+PARTICLE=14
+INTERACTION=Default
+EVENTS=2
+ENERGY_MIN=0.
+ENERGY_MAX=10.
+TUNE=AR23_20i_00_000
+
+
+#gevgen -n ${EVENTS} -r $RUNNUMBER -p ${PARTICLE} -t ${TARGET}[${TARGETFRACTION}] -e ${ENERGY_MIN},${ENERGY_MAX}  -f ${FLUXFILE} --cross-sections ${GENIEXSECFILE} --seed ${SEED} --event-generator-list ${INTERACTION} -o ${PARTICLE}_${TARGET}_${INTERACTION}_${TUNE}_${SEED}.ghep.root --tune ${TUNE}
+
+gevgen -n ${EVENTS} -r $RUNNUMBER -p ${PARTICLE} -t ${TARGET}[${TARGETFRACTION}] -e 1.--cross-sections ${GENIEXSECFILE} --seed ${SEED} --event-generator-list ${INTERACTION} -o ${PARTICLE}_${TARGET}_${INTERACTION}_${TUNE}_${SEED}.ghep.root --tune ${TUNE}

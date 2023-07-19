@@ -1,0 +1,4 @@
+<nuisance>
+  <config GENIETune="AR23_20i_00_000" />
+    <parameter type="genie_parameter" name="ZNormCCQE" nominal="1."/>
+</nuisance>
